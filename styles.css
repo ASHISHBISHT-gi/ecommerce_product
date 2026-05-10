@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap');
+
+/* Mobile */
+@media screen and (max-width: 73.0625em) {
+        html,body{
+            padding:0;
+            margin:0;
+            
+            font-style: normal;
+        }
+        *{
+            font-family: "Inter", sans-serif;
+        }
+        body{
+            width:100vw;
+            height:100dvh;
+            background-color:green;
+        }
+        main{
+            height:100%;
+        }
+        header{
+            display: flex;
+            outline:1px solid red;
+            justify-content:center;
+            gap:20%;
+            height: 10%;
+            
+            /* padding-top: 4%;
+            padding-bottom:4%; */
+
+        }
+        .left{
+            display: flex;
+            justify-content:center;
+            gap:5%;
+            align-items:center;
+            outline:1px solid green;
+            flex-basis:45%;
+            /* height:5%; */
+            justify-content: space-between;
+        }
+        h2{
+            font-size:33px;
+            margin:0;
+            font-weight:700;
+        }
+        .right{
+            display: flex;
+            justify-content:center;
+            gap:20%;
+            align-items:center;
+            outline: 1px solid red;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            display: none;
+        }
+        li{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            outline:1px solid red; 
+        }
+        .right>li:last-of-type {
+            flex-basis: 20%;
+        }
+        .avatar{
+            aspect-ratio: 1 / 1;
+            width:100%;
+        }
+        .image{
+            background-image: url("./images/image-product-1.jpg");
+            aspect-ratio: 1 / 0.8 ;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            gap:70%;
+        }
+        .image > div{
+            /* outline:1px solid red; */
+            width:10%;
+            aspect-ratio: 1 / 1;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:50%;
+            background-color:white;
+        }
+        .image > div > img{
+            width:26%;
+        }
+        .mid-right{
+            box-sizing: border-box;
+            padding:1rem;
+        }
+        .mid-right > p:first-of-type{
+            font-weight: 600;
+            font-size:0.8rem;
+            letter-spacing:20%;
+            color:hsl(219, 9%, 45%);
+        }
+        .mid-right > p:last-of-type{
+            line-height:1.6rem;
+            color:hsl(219, 9%, 45%);
+            font-weight:400;
+        }
+        .price{
+            display: flex;
+            justify-content: space-between;
+        }
+        .price > div{
+            display: flex;
+            align-items:center;
+            justify-content:space-between;
+            flex-basis:50%;
+        }
+}
+
+
+
+
+/* Desktop */
+@media screen and (min-width: 73.0625em) {
+    
+}
