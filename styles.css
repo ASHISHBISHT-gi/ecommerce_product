@@ -15,7 +15,8 @@
             width:100vw;
             /* height:100dvh; */
             padding-bottom:4rem;
-            background-color:green;
+            /* overflow: hidden; */
+            /* background-color:green; */
         }
         main{
             height:100%;
@@ -23,7 +24,7 @@
         }
         header{
             display: flex;
-            outline:1px solid red;
+            /* outline:1px solid red; */
             justify-content:center;
             gap:20%;
             height: 4rem;
@@ -52,7 +53,7 @@
             justify-content:center;
             gap:20%;
             align-items:center;
-            outline: 1px solid red;
+            /* outline: 1px solid red; */
         }
         ul{
             margin:0;
@@ -63,7 +64,7 @@
             list-style-type: none;
             margin:0;
             padding:0;
-            outline:1px solid red; 
+            /* outline:1px solid red;  */
         }
         .right>li:last-of-type {
             flex-basis: 20%;
@@ -73,17 +74,66 @@
             width:100%;
         }
         .image{
-            background-image: url("./images/image-product-1.jpg");
             aspect-ratio: 1 / 0.8 ;
             width:100%;
-            background-position: center;
-            background-size: cover;
             display:flex;
             justify-content:center;
             align-items: center;
             gap:70%;
         }
-        .image > div{
+        .container{
+            height:100%;
+            /* position: relative; */
+            width:100%;
+            display: flex;
+            outline:2px solid red;
+            gap:20%;
+            overflow:hidden;
+        }
+        .pic{
+            flex:0 0 100%;
+            /* position:absolute; */
+            height:100%;
+            width:100%;
+            transition: 0.5s;
+        }
+        .container .pic:nth-child(1){
+            background-position: center;
+            background-size: cover;
+            width:100%;
+            height:100%;
+        }
+        .container .pic:nth-child(2){
+            background-position: center;
+            background-size: cover;
+            width:100%;
+            height:100%;
+            /* left:120%; */
+        }
+        .container .pic:nth-child(3){
+            background-position: center;
+            background-size: cover;
+            width:100%;
+            /* left:120%; */
+            height:100%;
+        }
+        .container .pic:nth-child(4){
+            background-position: center;
+            background-size: cover;
+            width:100%;
+            height:100%;
+            /* left:240%; */
+        }
+
+        .buttons{
+            /* border:1px solid red; */
+            position: absolute;
+            width:100%;
+            display:flex;
+            justify-content: space-around;
+            gap:60%;
+        }
+        .buttons > button{
             /* outline:1px solid red; */
             width:10%;
             aspect-ratio: 1 / 1;
@@ -92,8 +142,10 @@
             justify-content: center;
             border-radius:50%;
             background-color:white;
+            padding:0;
+            border:0;
         }
-        .image > div > img{
+        .buttons > button > img{
             width:26%;
         }
         .mid-right{
@@ -149,12 +201,22 @@
             box-sizing:border-box;
             padding:4% 8%;
             border-radius:0.6rem;
-            background-color:hsl(220, 14%, 75%);
+            background-color:hsl(220, 14%, 96%);
         }
         .quantity > span{
             font-weight: 700;
         }
-        button{
+        .quantity > button{
+            width:10%;
+            vertical-align: middle;
+            aspect-ratio:1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:hsl(220, 14%, 96%);
+            border: 0;
+        }
+        .submit{
             display: flex;
             align-items:center;
             justify-content: center;
@@ -166,7 +228,7 @@
             font-size: 1rem;
             background-color:hsl(26, 100%, 55%);
         }
-        button >img{
+        .submit >img{
             aspect-ratio:1 / 1;
             width:5%;
             outline: none;

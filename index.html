@@ -43,8 +43,18 @@
       <div class="mid-left">
         <!-- <img id="image" src="./images/image-product-1.jpg" alt=""> -->
         <div class="image">
-          <div><img src="./images/icon-previous.svg" alt="move-left"></div>
-          <div><img src="./images/icon-next.svg" alt="move-right"></div>
+          <!-- container -->
+          <div class="container">
+            <div class="pic 1" style="background-image: url(./images/image-product-1.jpg);"></div>
+            <div class="pic 2" style="background-image: url(./images/image-product-2.jpg);"></div>
+            <div class="pic 3" style="background-image: url(./images/image-product-3.jpg);"></div>
+            <div class="pic 4" style="background-image: url(./images/image-product-4.jpg);"></div>
+            
+          </div>
+          <div class="buttons">
+            <button class="prev"><img src="./images/icon-previous.svg" alt="move-left"></button>
+            <button class="next"><img src="./images/icon-next.svg" alt="move-right"></button>
+          </div>
         </div>
       </div>
 
@@ -63,11 +73,11 @@
 
         <div class="add-cart">
           <div class="quantity">
-            <img src="./images/icon-minus.svg" alt="minus">
+            <button><img src="./images/icon-minus.svg" alt="minus"></button>
             <span>0</span>
-            <img src="./images/icon-plus.svg" alt="plus ">
+            <button><img src="./images/icon-plus.svg" alt="plus "></button>
           </div>
-          <button><img src="./images/icon-cart.svg" alt="">Add to cart</button>
+          <button class="submit"><img src="./images/icon-cart.svg" alt="">Add to cart</button>
       </div>
     </div>
     </div>
@@ -78,5 +88,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer> -->
+  <script src="./script.js"></script>
 </body>
 </html>
