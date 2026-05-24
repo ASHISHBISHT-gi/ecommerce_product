@@ -87,17 +87,23 @@
         .altchild{
             display: flex;
             box-sizing: border-box;
-            padding-top: 4rem;
-            padding-left:2rem;
+            flex-direction: column;
+            padding-left:5%;
+            padding-top: 5%;
+            gap:3%;
+            /* justify-items: center; */
+            /* align-items:center; */
+            /* padding-top: 4rem;
+            padding-left:2rem; */
             background-color: hsl(0, 0%, 100%);
             flex-basis: 67%;
 
 
         }
         .altchild ul{
-            margin-top:20%;
-            font-size:1.5rem;
-            font-weight: 500;
+            /* margin-top:20%; */
+            font-size:1.2rem;
+            font-weight: 700;
         }
         .altchild li{
             line-height:3.2rem;
