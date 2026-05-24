@@ -71,6 +71,8 @@
             padding:0;
             margin: 0;
             left:0;
+            /* this fixed the issue */
+            top:0;
             position: fixed;
             height:200dvh;
             display: flex;
@@ -83,9 +85,9 @@
             /* aspect-ratio:1; */
         }
         .altchild{
-            display: block;
+            display: flex;
             box-sizing: border-box;
-            padding-top: 40rem;
+            padding-top: 4rem;
             padding-left:2rem;
             background-color: hsl(0, 0%, 100%);
             flex-basis: 67%;
