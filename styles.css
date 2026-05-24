@@ -36,6 +36,7 @@
         .left{
             display: flex;
             justify-content:center;
+            position: relative;
             gap:5%;
             align-items:center;
             outline:1px solid green;
@@ -58,13 +59,52 @@
         ul{
             margin:0;
             padding:0;
-            display: none;
+            /* display: none; */
         }
         li{
             list-style-type: none;
             margin:0;
             padding:0;
             /* outline:1px solid red;  */
+        }
+        .alt{
+            padding:0;
+            margin: 0;
+            left:0;
+            position: fixed;
+            height:200dvh;
+            display: flex;
+            
+            width:100%;
+            z-index: 1;
+            /* border:12px solid red; */
+            /* display:flex; */
+            /* flex-shrink: 0; */
+            /* aspect-ratio:1; */
+        }
+        .altchild{
+            display: block;
+            box-sizing: border-box;
+            padding-top: 40rem;
+            padding-left:2rem;
+            background-color: hsl(0, 0%, 100%);
+            flex-basis: 67%;
+
+
+        }
+        .altchild ul{
+            margin-top:20%;
+            font-size:1.5rem;
+            font-weight: 500;
+        }
+        .altchild li{
+            line-height:3.2rem;
+        }
+        .shade{
+            /* background-color: blue; */
+            flex-basis:33%;
+            background-color: hsl(0, 0%, 0%);
+            opacity:0.7;
         }
         .right>li:last-of-type {
             flex-basis: 20%;
@@ -86,7 +126,7 @@
             /* position: relative; */
             width:100%;
             display: flex;
-            outline:2px solid red;
+            /* outline:2px solid red;  */
             gap:20%;
             overflow:hidden;
         }
@@ -223,11 +263,18 @@
             gap:4%;
             aspect-ratio: 1 / 0.17;
             border-radius:1rem;
-            box-shadow: none;
+            /* box-shadow: none; */
             font-weight: 700;
+            outline:none;
+            border: 0;
             font-size: 1rem;
             background-color:hsl(26, 100%, 55%);
         }
+        .submit:active {
+            outline: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+        }
+        
         .submit >img{
             aspect-ratio:1 / 1;
             width:5%;
