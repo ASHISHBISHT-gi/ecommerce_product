@@ -75,7 +75,8 @@
             top:0;
             position: fixed;
             height:200dvh;
-            display: flex;
+            /* display: flex; */
+            display: none;
             
             width:100%;
             z-index: 1;
@@ -116,6 +117,52 @@
         }
         .right>li:last-of-type {
             flex-basis: 20%;
+        }
+        #right{
+            position: relative;
+        }
+        .cartitems{
+            position: absolute;
+            top:3.2rem;
+            height:17rem;
+            z-index: 1 ;
+            border-radius:1rem;
+            display: flex;
+            flex-direction: column;
+            width:97dvw;
+            left:-18rem;
+            background-color: white;
+        }
+        .cartitems > div:nth-child(1){
+            display: flex;
+            box-sizing: border-box;
+            padding-left: 5%;
+            align-items: center;
+            position: relative;
+            flex-basis:30%;
+            border-bottom:1px solid lightslategray;
+            /* background-color: green; */
+        }
+        .cartitems > div:nth-child(2){
+            flex-basis:70%;
+            /* position:re lative; */
+            /* 
+            f index:-1;  */
+
+            /* box-sizing: border-box; */
+            /* padding-left: 5%; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: red; */
+        }
+        .cartitems > div:nth-child(1) > p{
+            font-weight: 700;
+            margin:0;
+            font-size: 1.2rem;
+        }
+        .cartitems > div:nth-child(2) > p{
+            color:red;
         }
         .avatar{
             aspect-ratio: 1 / 1;
