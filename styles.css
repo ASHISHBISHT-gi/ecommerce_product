@@ -151,18 +151,41 @@
 
             /* box-sizing: border-box; */
             /* padding-left: 5%; */
-            display: flex;
+            /* display: flex;
             align-items: center;
-            justify-content: center;
-            /* background-color: red; */
+            justify-content: center; */
+            /* background-color: lightslategray; */
         }
         .cartitems > div:nth-child(1) > p{
             font-weight: 700;
             margin:0;
             font-size: 1.2rem;
         }
-        .cartitems > div:nth-child(2) > p{
+        /* .cartitems > div:nth-child(2) > p{
             color:red;
+        } */
+        .show{
+            position:relative;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color:red; */
+        }
+        .show > p{
+            margin:0;
+            position: absolute;
+            z-index:-1;
+            font-weight: 700;
+            color:hsl(219, 9%, 45%);
+            /* top: 50%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            
+            /* color:red; */
+        }
+        .product{
+            background-color: hsl(0, 0%, 100%);
         }
         .avatar{
             aspect-ratio: 1 / 1;
