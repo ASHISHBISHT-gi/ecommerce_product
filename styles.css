@@ -441,6 +441,9 @@
             width:5%;
             outline: none;
         }
+        .modal-container{
+            display: hidden;
+        }
 }
 
 
@@ -459,6 +462,7 @@
     body{
         display: flex;
         justify-content: center;
+        position: relative;
     }
     main{
         border:1px solid red;
@@ -479,6 +483,47 @@
         align-items: center;
         gap:10%;
     }
+    .modal-container{
+        position:absolute;
+        width:100%;
+        height: 100%;
+        z-index: 1;
+        top:0;
+        /* background-color: hsl(0, 0%, 0%);
+        opacity:0.7; */
+        background-color: hsla(0, 0%, 0%, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal{
+        width:30%;
+        height:60%;
+        z-index: 1;
+        border:1px solid red;
+        position: relative;
+        background-color: white;
+    }
+    .modal-image{
+        width:100%;
+        height:100%;
+        background-image: url("./images/image-product-1.jpg");
+        background-position: center;
+        background-size: cover;
+        /* opacity: 1; */
+        /* z-index:2; */
+    }
+    .modal-cross{
+        position:absolute;
+    }
+    .modal-buttons{
+        position:absolute;
+    }
+    .modal-select{
+        position:absolute;
+    }
+
+
     .mid-left{
         flex-basis: 40%;
         height:90%;
