@@ -474,7 +474,7 @@
         justify-content: space-between;
         border:1px solid yellowgreen;
         height: 10%;
-        border-bottom: 1px solid hsl(220, 14%, 75%)hh ;
+        border-bottom: 1px solid hsl(220, 14%, 75%) ;
     }
     .mid{
         height: 90%;
@@ -483,6 +483,7 @@
         align-items: center;
         gap:10%;
     }
+    /* Modal */
     .modal-container{
         position:absolute;
         width:100%;
@@ -491,7 +492,7 @@
         top:0;
         /* background-color: hsl(0, 0%, 0%);
         opacity:0.7; */
-        background-color: hsla(0, 0%, 0%, 0.7);
+        background-color: hsla(0, 0%, 0%, 0.8);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -503,21 +504,53 @@
         border:1px solid red;
         position: relative;
         background-color: white;
-    }
-    .modal-image{
-        width:100%;
-        height:100%;
         background-image: url("./images/image-product-1.jpg");
         background-position: center;
         background-size: cover;
-        /* opacity: 1; */
-        /* z-index:2; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .modal-cross{
         position:absolute;
+        top:-8%;
+        left:97%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:3%;
+        border: 0;
+        outline: 0;
+        /* background-color: hsla(0, 0%, 0%, 0.7); */
+        background-color: hsla(0, 0%, 0%, 0);
+    }
+    .modal-cross:hover{
+        cursor: pointer;
+    }
+    .modal-cross > img:hover{
+        fill: hsl(26, 100%, 55%);
     }
     .modal-buttons{
-        position:absolute;
+        /* position:absolute; */
+        border:1px solid red;
+        width:100%;
+        display: flex;
+        align-items: center;
+        gap:90%;
+        justify-content: center;
+    }
+    .modal-buttons > button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height:3rem;
+        border: 0;
+        outline: 0;
+        aspect-ratio: 1;
+    }
+    .modal-buttons > buttons > img{
+        height: 20%;
     }
     .modal-select{
         position:absolute;
