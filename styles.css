@@ -518,26 +518,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width:3%;
+        width:6%;
         border: 0;
         outline: 0;
         /* background-color: hsla(0, 0%, 0%, 0.7); */
         background-color: hsla(0, 0%, 0%, 0);
     }
+    .top{
+        position: absolute;
+    }
     .modal-cross:hover{
         cursor: pointer;
     }
-    .modal-cross > img:hover{
+    .modal-cross  svg:hover path{
         fill: hsl(26, 100%, 55%);
     }
+
     .modal-buttons{
-        /* position:absolute; */
+        position:absolute;
         border:1px solid red;
-        width:100%;
+        width:110%;
         display: flex;
         align-items: center;
-        gap:90%;
-        justify-content: center;
+        /* gap:90%; */
+        justify-content: space-between;
     }
     .modal-buttons > button{
         display: flex;
@@ -549,9 +553,20 @@
         outline: 0;
         aspect-ratio: 1;
     }
-    .modal-buttons > buttons > img{
-        height: 20%;
+
+    .modal-buttons button:hover svg path{
+        stroke:hsl(26, 100%, 55%);
     }
+    
+    .modal-buttons svg{
+        border:1px solid green;
+
+    }
+    /* .modal-buttons > button > svg{
+        height: 20%;
+        width:30%;
+        border:1px solid red;
+    } */
     .modal-select{
         position:absolute;
     }
