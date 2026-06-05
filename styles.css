@@ -587,23 +587,28 @@
         background-color: hsla(0, 0%, 100%,45%);
         background-blend-mode: lighten; 
     }
+    .sel{
+        background-color: hsla(0, 0%, 100%,50%);
+        background-blend-mode: lighten; 
+    }
+    }
     .modal-image1{
-        background-image: url("./images/image-product-1-thumbnail.jpg");
+        background-image: url("./images/image-product-1.jpg");
         background-size: cover;
         background-position: center;
     }
     .modal-image2{
-        background-image: url("./images/image-product-2-thumbnail.jpg");
+        background-image: url("./images/image-product-2.jpg");
         background-size: cover;
         background-position: center;
     }
     .modal-image3{
-        background-image: url("./images/image-product-3-thumbnail.jpg");
+        background-image: url("./images/image-product-3.jpg");
         background-size: cover;
         background-position: center;
     }
     .modal-image4{
-        background-image: url("./images/image-product-4-thumbnail.jpg");
+        background-image: url("./images/image-product-4.jpg");
         background-size: cover;
         background-position: center;
     }
