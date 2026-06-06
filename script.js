@@ -106,3 +106,18 @@ pics.forEach((pic,index) => {
                 imagechanger(modal_selects[index],index);
         })
 });
+
+// cart view feature
+const cartitems=document.querySelector(".cartitems");
+const cart=document.querySelector(".cart > img");
+const body=document.querySelector("body");
+body.addEventListener('click',(e)=>{
+        cartitems.style.display="none";
+})
+cart.addEventListener('click',(e)=>{
+        cartitems.style.display="flex";
+        e.stopPropagation();
+})
+cartitems.addEventListener('click',(e)=>{
+        e.stopPropagation();
+})
