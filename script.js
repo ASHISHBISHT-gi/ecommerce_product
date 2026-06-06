@@ -86,10 +86,23 @@ modal_selects.forEach((modal_image, index) => {
 const modal_prev = document.querySelector(".modal-prev");
 const modal_next = document.querySelector(".modal-next");
 
+const mod = (n, m) => ((n % m) + m) % m;  
+
 modal_prev.addEventListener("click",(e) =>{
-        imagechanger(modal_selects[white-1],white-1);
+        console.log("white-1 is ", (white-1) % modal_selects.length);
+        imagechanger(modal_selects[mod(white-1, modal_selects.length)], mod(white-1, modal_selects.length));
 })
 
 modal_next.addEventListener("click",(e) =>{
-        imagechanger(modal_selects[white+1],white+1);
+        imagechanger(modal_selects[mod(white+1, modal_selects.length)], mod(white+1, modal_selects.length));
 })
+
+// container pic selection feature
+const image=document.querySelector(".image");
+const pics=document.querySelectorAll(".pic");
+pics.forEach((pic,index) => {
+        pic.addEventListener("click",(e)=>{
+                modal_container.style.display="flex";
+                imagechanger(modal_selects[index],index);
+        })
+});

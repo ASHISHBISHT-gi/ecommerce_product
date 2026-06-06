@@ -493,7 +493,8 @@
         /* background-color: hsl(0, 0%, 0%);
         opacity:0.7; */
         background-color: hsla(0, 0%, 0%, 0.8);
-        display: flex;
+        /* none to flex */
+        display: none;
         justify-content: center;
         align-items: center;
     }
@@ -591,7 +592,7 @@
         background-color: hsla(0, 0%, 100%,50%);
         background-blend-mode: lighten; 
     }
-    }
+
     .modal-image1{
         background-image: url("./images/image-product-1.jpg");
         background-size: cover;
@@ -712,6 +713,11 @@
         font-weight: 700;
         border-radius: 0.5rem;
     }
+    .container > div:nth-child(1){
+        background-color: hsla(0, 0%, 100%,70%);
+        background-blend-mode: lighten;
+        outline:0.15rem solid  hsl(26, 100%, 55%);
+    }
     .submit:hover{
         cursor: pointer;
     }
@@ -788,9 +794,5 @@
         aspect-ratio: 1;
         width:100%;
     }
-
-
-
-
 
 }
