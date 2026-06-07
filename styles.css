@@ -799,29 +799,34 @@
     .show{
         height: 100%;
         width:100%;
-        /* background-color: yellow; */
+        background-color: hsl(0, 0%, 100%);
         position: relative;
         border-radius: 0.5rem;
+        position: relative;
     }
     .show > p{
         position: absolute;
-        z-index: -1;
+        /* z-index: 1; */
         top: 50%;
         left: 50%;
         border-radius: 0.5rem;
         transform: translate(-50%, -50%);
     }
     .product{
-        display: flex;
+        /* flex to none */
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border:1px solid green;
+        position: relative;
         height:100%;
         width: 100%;
+        /* z-index: 1; */
         border-radius: 0.5rem;
         gap:10%;
-        background-color: white;
+        background-color: hsl(0, 0%, 100%);
+        /* background-color: red; */
 
     }
     .product > button{
@@ -841,6 +846,8 @@
         justify-content:center;
         gap:5%;
         align-items: center;
+        position: relative;
+        /* z-index: 2; */
         height:40%;
         width: 100%;
         /* border:1px solid green; */
@@ -864,6 +871,12 @@
     .description b{
         color:black;
         }
+    .description > div{
+        display: flex;
+        gap:3%;
+        color:hsl(219, 9%, 45%);
+        font-weight: 400;
+    }
 
     .left > img{
         display: none;

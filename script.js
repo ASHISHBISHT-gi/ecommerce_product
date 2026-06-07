@@ -86,38 +86,81 @@ modal_selects.forEach((modal_image, index) => {
 const modal_prev = document.querySelector(".modal-prev");
 const modal_next = document.querySelector(".modal-next");
 
-const mod = (n, m) => ((n % m) + m) % m;  
+const mod = (n, m) => ((n % m) + m) % m;
 
-modal_prev.addEventListener("click",(e) =>{
-        console.log("white-1 is ", (white-1) % modal_selects.length);
-        imagechanger(modal_selects[mod(white-1, modal_selects.length)], mod(white-1, modal_selects.length));
+modal_prev.addEventListener("click", (e) => {
+        console.log("white-1 is ", (white - 1) % modal_selects.length);
+        imagechanger(modal_selects[mod(white - 1, modal_selects.length)], mod(white - 1, modal_selects.length));
 })
 
-modal_next.addEventListener("click",(e) =>{
-        imagechanger(modal_selects[mod(white+1, modal_selects.length)], mod(white+1, modal_selects.length));
+modal_next.addEventListener("click", (e) => {
+        imagechanger(modal_selects[mod(white + 1, modal_selects.length)], mod(white + 1, modal_selects.length));
 })
 
 // container pic selection feature
-const image=document.querySelector(".image");
-const pics=document.querySelectorAll(".pic");
-pics.forEach((pic,index) => {
-        pic.addEventListener("click",(e)=>{
-                modal_container.style.display="flex";
-                imagechanger(modal_selects[index],index);
+const image = document.querySelector(".image");
+const pics = document.querySelectorAll(".pic");
+pics.forEach((pic, index) => {
+        pic.addEventListener("click", (e) => {
+                modal_container.style.display = "flex";
+                imagechanger(modal_selects[index], index);
         })
 });
 
 // cart view feature
-const cartitems=document.querySelector(".cartitems");
-const cart=document.querySelector(".cart > img");
-const body=document.querySelector("body");
-body.addEventListener('click',(e)=>{
-        cartitems.style.display="none";
+const cartitems = document.querySelector(".cartitems");
+const cart = document.querySelector(".cart > img");
+const body = document.querySelector("body");
+body.addEventListener('click', (e) => {
+        cartitems.style.display = "none";
 })
-cart.addEventListener('click',(e)=>{
-        cartitems.style.display="flex";
+cart.addEventListener('click', (e) => {
+        cartitems.style.display = "flex";
         e.stopPropagation();
 })
-cartitems.addEventListener('click',(e)=>{
+cartitems.addEventListener('click', (e) => {
         e.stopPropagation();
+})
+
+// cart items add feature - Ist
+const minus = document.querySelector(".minus");
+const plus = document.querySelector(".plus");
+const quantity = document.querySelector(".quantity > span");
+
+minus.addEventListener('click', (e) => {
+        if (Number(quantity.textContent - 1) >= 0) {
+                e.stopPropagation();
+                quantity.innerHTML = Number(quantity.textContent) - 1;
+        }
+
+
+})
+
+plus.addEventListener('click', (e) => {
+        e.stopPropagation();
+        quantity.innerHTML = Number(quantity.textContent) + 1;
+        console.log("hi from plus");
+})
+
+// add to cart feature - IInd
+const product = document.querySelector(".product");
+const submit = document.querySelector(".submit");
+const dlt = document.querySelector(".delete");
+const pricecart = document.querySelector(".pricecart");
+const b=document.querySelector("b");
+submit.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (Number(quantity.textContent) == 0) {
+                product.style.display = "none";
+        } else {
+                pricecart.children[1].textContent = quantity.textContent;
+                product.style.display = "flex";
+                b.textContent="$" + (Number(quantity.textContent) * 125.00).toFixed(2);
+        }
+
+})
+
+dlt.addEventListener('click',(e)=>{
+        product.style.display="none";
+        quantity.textContent=0;
 })
