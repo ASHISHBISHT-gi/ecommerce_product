@@ -138,6 +138,7 @@
             color:white;
             top:-35%;
         }
+       
         .cartitems{
             position: absolute;
             top:3.2rem;
@@ -543,6 +544,7 @@
     }
     .avatar:hover{
         outline:0.15rem solid hsl(26, 100%, 55%);;
+        cursor: pointer;
     }
     .modal-buttons{
         position:absolute;
@@ -637,6 +639,9 @@
         position: relative;
         border-radius: 1rem;
     }
+    .image:hover{
+        cursor: pointer;
+    }
     .container{
         position: absolute;
         border:1px solid  black;
@@ -648,6 +653,8 @@
     }
     .container div:hover{
         cursor: pointer;
+        background-color: hsla(0, 0%, 100%,50%);
+        background-blend-mode: lighten;
     }
     .pic{
         flex-basis:21%;
@@ -766,6 +773,10 @@
     .buttons{
         display: none;
     }
+    .cart > img:hover{
+            cursor: pointer;
+    }
+
     /* cartitems */
     .cartitems{
         position: absolute;

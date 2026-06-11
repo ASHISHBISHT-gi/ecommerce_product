@@ -63,6 +63,9 @@ modal_cross.addEventListener("click", (e) => {
 // image select feature
 const modal_selects = document.querySelectorAll(".modal-select > div");
 const modal = document.querySelector(".modal");
+
+// image changer function
+let white = 0;
 function imagechanger(modal_image, index) {
         modal_image.classList.add("sel");
         modal_selects[white].classList.remove("sel");
@@ -75,7 +78,7 @@ function imagechanger(modal_image, index) {
         modal.style.backgroundImage = `url(${bi})`;
 }
 
-let white = 0;
+
 modal_selects.forEach((modal_image, index) => {
         modal_image.addEventListener("click", (e) => {
                 imagechanger(modal_image, index);
@@ -102,8 +105,9 @@ const image = document.querySelector(".image");
 const pics = document.querySelectorAll(".pic");
 pics.forEach((pic, index) => {
         pic.addEventListener("click", (e) => {
-                modal_container.style.display = "flex";
-                imagechanger(modal_selects[index], index);
+                // modal_container.style.display = "flex";
+                // imagechanger(modal_selects[index], index);
+                
         })
 });
 
