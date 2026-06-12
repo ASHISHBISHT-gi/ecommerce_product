@@ -728,7 +728,7 @@
         font-weight: 700;
         border-radius: 0.5rem;
     }
-    .container > div:nth-child(1){
+    .def{
         background-color: hsla(0, 0%, 100%,70%);
         background-blend-mode: lighten;
         outline:0.15rem solid  hsl(26, 100%, 55%);

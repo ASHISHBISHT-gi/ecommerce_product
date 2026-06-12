@@ -63,12 +63,13 @@ modal_cross.addEventListener("click", (e) => {
 // image select feature
 const modal_selects = document.querySelectorAll(".modal-select > div");
 const modal = document.querySelector(".modal");
-
+const image = document.querySelector(".image");
+const pics = document.querySelectorAll(".pic");
 // image changer function
 let white = 0;
-function imagechanger(modal_image, index) {
-        modal_image.classList.add("sel");
+function modalImageChanger(modal_image, index) {
         modal_selects[white].classList.remove("sel");
+        modal_image.classList.add("sel");
         white = index;
         console.log("index is ", index);
         console.log("white is ", white);
@@ -76,12 +77,26 @@ function imagechanger(modal_image, index) {
         const bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
         // console.log(bi)
         modal.style.backgroundImage = `url(${bi})`;
+        image.style.backgroundImage = `url(${bi})`;
 }
-
+function mainImageChanger(main_image,index){
+      pics[white].classList.remove("def");
+      main_image.classList.add("def");
+      white = index;
+      const style = window.getComputedStyle(main_image, false);
+      const bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+      console.log("main bi is ", bi);
+      image.style.backgroundImage= `url(${bi})`;
+      
+}
+image.addEventListener("click",(e)=>{
+    modal_container.style.display="flex";
+    console.log("hello from image");
+})
 
 modal_selects.forEach((modal_image, index) => {
         modal_image.addEventListener("click", (e) => {
-                imagechanger(modal_image, index);
+                modalImageChanger(modal_image, index , "sel");
         });
 });
 
@@ -93,20 +108,19 @@ const mod = (n, m) => ((n % m) + m) % m;
 
 modal_prev.addEventListener("click", (e) => {
         console.log("white-1 is ", (white - 1) % modal_selects.length);
-        imagechanger(modal_selects[mod(white - 1, modal_selects.length)], mod(white - 1, modal_selects.length));
+        modalImageChanger(modal_selects[mod(white - 1, modal_selects.length)], mod(white - 1, modal_selects.length), "sel");
 })
 
 modal_next.addEventListener("click", (e) => {
-        imagechanger(modal_selects[mod(white + 1, modal_selects.length)], mod(white + 1, modal_selects.length));
+        modalImageChanger(modal_selects[mod(white + 1, modal_selects.length)], mod(white + 1, modal_selects.length), "sel");
 })
 
-// container pic selection feature
-const image = document.querySelector(".image");
-const pics = document.querySelectorAll(".pic");
+// container pic selection feature > working on this feature
 pics.forEach((pic, index) => {
         pic.addEventListener("click", (e) => {
                 // modal_container.style.display = "flex";
                 // imagechanger(modal_selects[index], index);
+               mainImageChanger(pic,index);
                 
         })
 });
