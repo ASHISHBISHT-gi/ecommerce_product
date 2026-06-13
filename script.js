@@ -77,12 +77,12 @@ function modalImageChanger(modal_image, index) {
         const bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
         // console.log(bi)
         modal.style.backgroundImage = `url(${bi})`;
-        image.style.backgroundImage = `url(${bi})`;
 }
+let main_white=0;
 function mainImageChanger(main_image,index){
-      pics[white].classList.remove("def");
+      pics[main_white].classList.remove("def");
       main_image.classList.add("def");
-      white = index;
+      main_white = index;
       const style = window.getComputedStyle(main_image, false);
       const bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
       console.log("main bi is ", bi);
@@ -118,10 +118,8 @@ modal_next.addEventListener("click", (e) => {
 // container pic selection feature > working on this feature
 pics.forEach((pic, index) => {
         pic.addEventListener("click", (e) => {
-                // modal_container.style.display = "flex";
-                // imagechanger(modal_selects[index], index);
-               mainImageChanger(pic,index);
-                
+               console.log("hello from pic")
+               mainImageChanger(pic,index);                
         })
 });
 
