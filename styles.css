@@ -743,15 +743,13 @@
         border-radius: 0.5rem;
     }
     .submit:hover{
+      cursor: pointer;
       background-color:hsl(26,100%,70%);
     }
     .def{
         background-color: hsla(0, 0%, 100%,70%);
         background-blend-mode: lighten;
         outline:0.15rem solid  hsl(26, 100%, 55%);
-    }
-    .submit:hover{
-        cursor: pointer;
     }
     .submit svg path{
       fill:hsl(0,0%,0%);
@@ -880,6 +878,10 @@
     .product > button:active{
         outline:0;
     }
+    .product > button:hover{
+        background-color: hsl(26, 100%, 70%);
+        cursor: pointer;
+    }
     .product_quantity{
         display: flex;
         justify-content:center;
@@ -978,6 +980,9 @@
     .altchild{
         height:100%;
         /* border:1px solid green; */
+    }
+    .delete:hover{
+       cursor: pointer;
     }
 
 }
