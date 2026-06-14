@@ -17,32 +17,35 @@ next.addEventListener("click", (e) => {
         container.appendChild(images[0]);
         console.log("next");
 });
+ async function svgchanger(presvgimage , enable=0){
+             const imgId = presvgimage.getAttribute("id");
+             const imgClass = presvgimage.getAttribute("class");
+             const imgUrl = presvgimage.getAttribute("src");
+             const imgheight = presvgimage.height;
+             const imgwidth = presvgimage.width;
+             const response = await fetch(imgUrl);
+             const text = await response.text();
+             const parser = new DOMParser();
+             const xmlDoc = parser.parseFromString(text, "image/svg+xml");
+             const svg = xmlDoc.querySelector("svg");
+             if (imgId) svg.setAttribute("id", imgId);
+             if (imgClass) svg.setAttribute("class", `$(imgClass) replace-svg`);
+             if(enable){
+                  console.log("enabled");
+                  svg.removeAttribute("width");
+                  svg.removeAttribute("height");
+            }
+            svg.setAttribute("width", imgwidth);
+            svg.setAttribute("height", imgheight);
+            
+             svg.removeAttribute("xmlns:a")
+             presvgimage.replaceWith(svg);
+             
+}
 
 const modal_images = document.querySelectorAll(".modal img");
 modal_images.forEach(async (modal_image) => {
-        const imgId = modal_image.getAttribute("id");
-        const imgClass = modal_image.getAttribute("class");
-        const imgUrl = modal_image.getAttribute("src");
-        const imgheight = modal_image.height;
-        const imgwidth = modal_image.width;
-        console.log("imgUrl is ", imgUrl);
-        const response = await fetch(imgUrl);
-        const text = await response.text();
-        console.log("text is ", text);
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, "image/svg+xml");
-        console.log("xmlDoc ", xmlDoc);
-        console.log(typeof xmlDoc);
-        const svg = xmlDoc.querySelector("svg");
-        console.log("svg is ", svg);
-        if (imgId) svg.setAttribute("id", imgId);
-        if (imgClass) svg.setAttribute("class", `${imgClass} replace-svg`);
-        svg.setAttribute("width", imgwidth);
-        svg.setAttribute("height", imgheight);
-        console.log(imgheight);
-        console.log(imgwidth);
-        svg.removeAttribute("xmlns:a");
-        modal_image.replaceWith(svg);
+        svgchanger(modal_image);
 });
 
 // async function svgconverter() {
@@ -180,3 +183,7 @@ dlt.addEventListener('click',(e)=>{
         product.style.display="none";
         quantity.textContent=0;
 })
+
+// button svg
+const buttonsvg = document.querySelector(".submit > img");
+svgchanger(buttonsvg,1);
